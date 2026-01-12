@@ -7,7 +7,7 @@ const videos = [
   {
     id: "1",
     title: "Thoughts of Life",
-    thumbnail: "https://cdn.builder.io/api/v1/image/assets%2F8b84be17aad14310b285d25f23a3235d%2F3ac3a1b0fc5847aab365b95738f9631b?format=webp&width=800",
+    thumbnail: "https://cdn.builder.io/api/v1/image/assets%2F8b84be17aad14310b285d25f23a3235d%2F3ac3a1b0fc5847aab365b95738f9631b?format=png&width=1200",
     views: "2.5M",
     duration: "12:34",
     description: "Watch me break the Guinness World Record for the most incredible balance feat ever attempted.",
