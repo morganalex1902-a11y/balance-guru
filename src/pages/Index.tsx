@@ -7,6 +7,7 @@ import ProductsSection from "@/components/ProductsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import YouTubeSection from "@/components/YouTubeSection";
 import LegacySection from "@/components/LegacySection";
+import AffiliatedSection from "@/components/AffiliatedSection";
 import InstagramSection from "@/components/InstagramSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
