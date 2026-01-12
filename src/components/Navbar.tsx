@@ -6,10 +6,10 @@ import { useCart } from "@/contexts/CartContext";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/#about" },
+  { label: "About", href: "/#about", pageLink: "/about" },
   { label: "Shop", href: "/shop" },
   { label: "Legacy", href: "/legacy" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/#contact", pageLink: "/contact" },
 ];
 
 const Navbar = () => {
@@ -17,12 +17,20 @@ const Navbar = () => {
   const location = useLocation();
   const { getCartCount, setIsCartOpen } = useCart();
 
-  const isActive = (href: string) => {
-    // For hash links on home page
+  const isActive = (item: typeof navItems[0]) => {
+    const { href, pageLink } = item;
+
+    // Check if we're on a dedicated page (e.g., /about, /contact)
+    if (pageLink && location.pathname === pageLink) {
+      return true;
+    }
+
+    // Check if we're on home page with hash link
     if (href.startsWith("/#")) {
       return location.pathname === "/" && location.hash === href.slice(1);
     }
-    // For regular routes
+
+    // Check regular routes
     return location.pathname === href;
   };
 
