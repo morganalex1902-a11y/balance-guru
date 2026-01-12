@@ -14,8 +14,8 @@ const ProductCard = ({ product }: { product: Product }) => {
   const navigate = useNavigate();
   const { addToCart, setIsCartOpen } = useCart();
   const { toast } = useToast();
-  const [selectedSize, setSelectedSize] = useState(product.sizes?.[0]);
-  const [selectedColor, setSelectedColor] = useState(product.colors?.[0]);
+  const [selectedSize, setSelectedSize] = useState(product.defaultSize || product.sizes?.[0]);
+  const [selectedColor, setSelectedColor] = useState(product.defaultColor || product.colors?.[0]);
   const [isHovered, setIsHovered] = useState(false);
 
   const handleAddToCart = (e: React.MouseEvent) => {
