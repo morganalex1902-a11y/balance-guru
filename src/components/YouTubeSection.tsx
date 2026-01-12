@@ -115,18 +115,9 @@ const VideoCard = ({ video, index }: { video: typeof videos[0]; index: number })
 
         {/* Content */}
         <div className="absolute bottom-0 left-0 right-0 p-6">
-          <div className="flex items-center gap-2 text-muted-foreground text-sm mb-2">
-            <Eye className="w-4 h-4" />
-            {video.views} views
-          </div>
           <h3 className={`font-display ${video.featured ? "text-2xl md:text-3xl" : "text-xl"} text-foreground leading-tight`}>
             {video.title}
           </h3>
-          {video.featured && (
-            <p className="mt-2 text-muted-foreground hidden md:block">
-              {video.description}
-            </p>
-          )}
         </div>
 
         {/* Glow border */}
