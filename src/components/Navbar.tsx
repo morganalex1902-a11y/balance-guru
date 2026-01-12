@@ -70,7 +70,7 @@ const Navbar = () => {
                 <Link
                   to={item.href}
                   className={`nav-item font-medium text-sm uppercase tracking-wider px-4 py-2 rounded-lg transition-all ${
-                    isActive(item.href)
+                    isActive(item)
                       ? "text-primary"
                       : "text-foreground hover:text-primary/80"
                   }`}
