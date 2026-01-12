@@ -28,6 +28,7 @@ const Index = () => {
           <TestimonialsSection />
           <YouTubeSection />
           <LegacySection />
+          <AffiliatedSection />
           <InstagramSection />
           <ContactSection />
         </main>
