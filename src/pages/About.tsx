@@ -24,7 +24,10 @@ const About = () => {
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl">
               MEET <span className="gradient-text">THE BALANCE GURU</span>
             </h1>
-            <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="mt-4 text-primary font-semibold text-lg">
+              World record holder | Veteran | Brand owner | Driven by passion & purpose
+            </p>
+            <p className="mt-2 text-muted-foreground text-lg max-w-2xl mx-auto">
               Discover the journey, philosophy, and achievements of Travis Horn
             </p>
           </motion.div>
