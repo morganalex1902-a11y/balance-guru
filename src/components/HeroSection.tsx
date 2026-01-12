@@ -76,6 +76,15 @@ const HeroSection = () => {
             </motion.h1>
 
             <motion.p
+              className="mt-4 text-lg md:text-xl text-primary font-semibold max-w-lg mx-auto lg:mx-0"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.0, duration: 0.6 }}
+            >
+              World record holder | Veteran | Brand owner | Driven by passion & purpose
+            </motion.p>
+
+            <motion.p
               className="mt-8 text-lg md:text-xl text-muted-foreground max-w-lg mx-auto lg:mx-0"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
