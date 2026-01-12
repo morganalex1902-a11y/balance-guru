@@ -230,6 +230,7 @@ export const allProducts: Product[] = [
 
 export const categories = [
   { id: "all", label: "All Products" },
+  { id: "gifts", label: "Gifts for Her" },
   { id: "equipment", label: "Equipment" },
   { id: "mens", label: "Men's" },
   { id: "womens", label: "Women's" },
