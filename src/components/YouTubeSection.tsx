@@ -7,7 +7,7 @@ const videos = [
   {
     id: "1",
     title: "WORLD RECORD Balance Challenge",
-    thumbnail: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=450&fit=crop",
+    thumbnail: "https://img.youtube.com/vi/MJyKIsdFFWE/maxresdefault.jpg",
     views: "2.5M",
     duration: "12:34",
     description: "Watch me break the Guinness World Record for the most incredible balance feat ever attempted.",
@@ -17,7 +17,7 @@ const videos = [
   {
     id: "2",
     title: "5 Balance Exercises for Beginners",
-    thumbnail: "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=800&h=450&fit=crop",
+    thumbnail: "https://img.youtube.com/vi/L3hjBovlaxk/maxresdefault.jpg",
     views: "850K",
     duration: "8:21",
     description: "Perfect your foundation with these essential balance techniques.",
@@ -27,7 +27,7 @@ const videos = [
   {
     id: "3",
     title: "Behind the Scenes: Training Day",
-    thumbnail: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=450&fit=crop",
+    thumbnail: "https://img.youtube.com/vi/2wHXYg3230I/maxresdefault.jpg",
     views: "1.2M",
     duration: "15:47",
     description: "A day in the life of The Balance Guru - see my training routine.",
@@ -37,7 +37,7 @@ const videos = [
   {
     id: "4",
     title: "Impossible Balance Tricks Explained",
-    thumbnail: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=450&fit=crop",
+    thumbnail: "https://img.youtube.com/vi/k0rlx4lpMlc/maxresdefault.jpg",
     views: "980K",
     duration: "10:15",
     description: "Breaking down the physics behind seemingly impossible feats.",
