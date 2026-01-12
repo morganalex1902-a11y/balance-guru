@@ -24,7 +24,10 @@ const Legacy = () => {
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl">
               BUILDING A <span className="gradient-text">LEGACY</span>
             </h1>
-            <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="mt-4 text-primary font-semibold text-lg">
+              World record holder | Veteran | Brand owner | Driven by passion & purpose
+            </p>
+            <p className="mt-2 text-muted-foreground text-lg max-w-2xl mx-auto">
               From humble beginnings to world record holder — the milestones that shaped The Balance Guru
             </p>
           </motion.div>
