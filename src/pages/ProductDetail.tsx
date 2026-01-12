@@ -82,19 +82,28 @@ const ProductDetail = () => {
                 <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 to-transparent rounded-2xl" />
                 <div className="absolute -inset-2 bg-card rounded-xl" />
 
-                <div className="relative glass-strong rounded-xl overflow-hidden p-2">
-                  <motion.img
-                    src={product.image}
-                    alt={product.title}
-                    className="w-full h-auto rounded-lg"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.6 }}
-                  />
-                  <div className="absolute inset-0 border-2 border-primary/30 rounded-xl pointer-events-none" />
+                <div className="relative z-10">
+                  {product.gallery && product.gallery.length > 0 ? (
+                    <ProductImageCarousel
+                      images={product.gallery}
+                      productName={product.title}
+                    />
+                  ) : (
+                    <div className="relative glass-strong rounded-xl overflow-hidden p-2">
+                      <motion.img
+                        src={product.image}
+                        alt={product.title}
+                        className="w-full h-auto rounded-lg"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.6 }}
+                      />
+                      <div className="absolute inset-0 border-2 border-primary/30 rounded-xl pointer-events-none" />
+                    </div>
+                  )}
                 </div>
 
                 {product.featured && (
-                  <div className="absolute top-6 right-6 flex items-center gap-1 px-4 py-2 bg-primary text-primary-foreground rounded-full font-semibold">
+                  <div className="absolute top-6 right-6 flex items-center gap-1 px-4 py-2 bg-primary text-primary-foreground rounded-full font-semibold z-20">
                     <Star className="w-4 h-4 fill-current" />
                     Featured
                   </div>
