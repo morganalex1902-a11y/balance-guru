@@ -14,16 +14,17 @@ const products = [
   },
   {
     title: "Gifts for Her",
-    subtitle: "Premium girls wear collection",
-    image: "https://cdn.builder.io/api/v1/image/assets%2F86d69472a8b84fc88a12f6a99124927a%2F244813e8d05842539f5495e9d183a682?format=webp&width=800",
+    subtitle: "Premium gifts collection",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F86d69472a8b84fc88a12f6a99124927a%2F2da5adf2eef24129ae145de4323dacbc?format=webp&width=800",
     featured: false,
     category: "gifts",
   },
   {
     title: "Gifts for Him",
-    subtitle: "Men's performance wear collection",
-    image: "/products/gifts-him.jpg",
+    subtitle: "Men's premium gifts collection",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F86d69472a8b84fc88a12f6a99124927a%2F6031a7bff27a4067805c215427af3646?format=webp&width=800",
     featured: false,
+    category: "gifts-for-him",
   },
 ];
 
