@@ -10,6 +10,13 @@ const About = () => {
 
       {/* Hero */}
       <section className="pt-32 pb-16 relative overflow-hidden">
+        <div className="absolute inset-0" style={{
+          backgroundImage: "url('https://cdn.builder.io/api/v1/image/assets%2F86d69472a8b84fc88a12f6a99124927a%2F91aa7f06c0a4425ead2244235fab3425?format=webp&width=800')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0.1,
+          zIndex: 0
+        }} />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
@@ -24,7 +31,10 @@ const About = () => {
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl">
               MEET <span className="gradient-text">THE BALANCE GURU</span>
             </h1>
-            <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="mt-4 text-primary font-semibold text-lg">
+              World record holder | Veteran | Brand owner | Driven by passion & purpose
+            </p>
+            <p className="mt-2 text-muted-foreground text-lg max-w-2xl mx-auto">
               Discover the journey, philosophy, and achievements of Travis Horn
             </p>
           </motion.div>

@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShoppingCart, Filter, Search, X, Star, ShoppingBag } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Navbar from "@/components/Navbar";
@@ -14,8 +14,8 @@ const ProductCard = ({ product }: { product: Product }) => {
   const navigate = useNavigate();
   const { addToCart, setIsCartOpen } = useCart();
   const { toast } = useToast();
-  const [selectedSize, setSelectedSize] = useState(product.sizes?.[0]);
-  const [selectedColor, setSelectedColor] = useState(product.colors?.[0]);
+  const [selectedSize, setSelectedSize] = useState(product.defaultSize || product.sizes?.[0]);
+  const [selectedColor, setSelectedColor] = useState(product.defaultColor || product.colors?.[0]);
   const [isHovered, setIsHovered] = useState(false);
 
   const handleAddToCart = (e: React.MouseEvent) => {
@@ -157,10 +157,18 @@ const ProductCard = ({ product }: { product: Product }) => {
 };
 
 const Shop = () => {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchParams] = useSearchParams();
+  const [selectedCategory, setSelectedCategory] = useState(searchParams.get("category") || "all");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState("featured");
   const { getCartCount, setIsCartOpen } = useCart();
+
+  useEffect(() => {
+    const categoryParam = searchParams.get("category");
+    if (categoryParam) {
+      setSelectedCategory(categoryParam);
+    }
+  }, [searchParams]);
 
   const filteredProducts = allProducts
     .filter((product) => {

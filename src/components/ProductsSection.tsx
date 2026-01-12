@@ -1,33 +1,43 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ProductCard from "./ProductCard";
 
 const products = [
   {
     title: "Achedaway Mini Scraper",
     subtitle: "On-the-Go Heated Muscle Scraping Tool",
-    image: "/products/scraper.jpg",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Fbd2db2bf76dc466fa0ee7e5d644defec%2F4c583a3ee0a4493eb5e6fca0dada86fa?format=webp&width=800",
     featured: true,
+    category: "equipment",
   },
   {
     title: "Gifts for Her",
-    subtitle: "Premium girls wear collection",
-    image: "/products/gifts-her.jpg",
+    subtitle: "Premium gifts collection",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F86d69472a8b84fc88a12f6a99124927a%2F2da5adf2eef24129ae145de4323dacbc?format=webp&width=800",
     featured: false,
+    category: "gifts",
   },
   {
     title: "Gifts for Him",
-    subtitle: "Men's performance wear collection",
-    image: "/products/gifts-him.jpg",
+    subtitle: "Men's premium gifts collection",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F86d69472a8b84fc88a12f6a99124927a%2F6031a7bff27a4067805c215427af3646?format=webp&width=800",
     featured: false,
+    category: "gifts-for-him",
   },
 ];
 
 const ProductsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const navigate = useNavigate();
+
+  const handleProductClick = (product: typeof products[0]) => {
+    if (product.category) {
+      navigate(`/shop?category=${product.category}`);
+    }
+  };
 
   return (
     <section id="products" className="section-padding bg-background relative overflow-hidden">
@@ -57,11 +67,16 @@ const ProductsSection = () => {
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {products.map((product, index) => (
-            <ProductCard
+            <div
               key={product.title}
-              {...product}
-              delay={0.1 * index}
-            />
+              onClick={() => handleProductClick(product)}
+              className="cursor-pointer"
+            >
+              <ProductCard
+                {...product}
+                delay={0.1 * index}
+              />
+            </div>
           ))}
         </div>
 
@@ -80,11 +95,11 @@ const ProductsSection = () => {
               to="/shop"
               className="group relative inline-block px-8 py-4 font-display text-xl tracking-wider text-primary border-2 border-primary/50 rounded-xl overflow-hidden"
             >
-              <span className="relative z-10 group-hover:text-primary-foreground transition-colors duration-300">
+              <span className="relative z-10 group-hover:text-black transition-colors duration-300">
                 VIEW ALL PRODUCTS
               </span>
               <motion.div
-                className="absolute inset-0 bg-primary"
+                className="absolute inset-0 bg-yellow-400"
                 initial={{ x: "-100%" }}
                 whileHover={{ x: 0 }}
                 transition={{ duration: 0.3 }}
