@@ -11,6 +11,7 @@ export interface Product {
   sizes?: string[];
   colors?: string[];
   description?: string;
+  gallery?: string[];
 }
 
 export interface CartItem extends Product {
