@@ -182,6 +182,7 @@ export const allProducts: Product[] = [
     image: "https://cdn.builder.io/api/v1/image/assets%2F86d69472a8b84fc88a12f6a99124927a%2F2109c51509d44907932fbd10da68ac1d?format=webp&width=800",
     category: "gifts",
     colors: ["Black Jack", "Howlite", "Heather Gray", "Light Gray Heather", "Flamingo", "Orchid", "Jet Stream"],
+    defaultColor: "Jet Stream",
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
   },
   {
