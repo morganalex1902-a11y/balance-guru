@@ -72,11 +72,12 @@ const VideoCard = ({ video, index }: { video: typeof videos[0]; index: number })
             src={video.thumbnail}
             alt={video.title}
             className="w-full h-full object-cover"
+            style={{ filter: "contrast(1.1) brightness(1.05)" }}
             animate={{ scale: isHovered ? 1.1 : 1 }}
             transition={{ duration: 0.6 }}
           />
           {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
         </div>
 
         {/* Play Button */}
