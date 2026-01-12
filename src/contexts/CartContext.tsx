@@ -10,6 +10,8 @@ export interface Product {
   featured?: boolean;
   sizes?: string[];
   colors?: string[];
+  defaultColor?: string;
+  defaultSize?: string;
   description?: string;
   gallery?: string[];
 }
